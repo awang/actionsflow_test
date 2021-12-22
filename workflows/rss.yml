@@ -6,12 +6,12 @@ jobs:
     name: Print
     runs-on: ubuntu-latest
     steps:
-       - name: Print Outputs 2
-         env:
+      - name: Print Outputs 2
+        env:
           outputs: ${{ toJSON(on.rss.outputs) }}
-         run: |
+        run: |
           echo outputs: $outputs
-       - name: Print Outputs
+      - name: Print Outputs
         env:
           title: ${{on.rss.outputs.title}}
           contentSnippet: ${{on.rss.outputs.contentSnippet}}
