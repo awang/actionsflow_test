@@ -15,6 +15,9 @@ jobs:
           echo title: $title
           echo contentSnippet: $contentSnippet
           echo link: $link
+      - id: step1
+        name: Test Step
+        run: echo "::set-output name=test::hello"
       - name: Make a HTTP Request
         uses: actionsflow/axios@v1
         with:
