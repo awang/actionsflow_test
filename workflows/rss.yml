@@ -34,3 +34,9 @@ jobs:
               "title": "${{ on.rss.outputs.title }}",
               "content":"<<<${{ on.rss.outputs.contentSnippet }}>>>"
             }
+      - name: Slack notification
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}          
+        uses: Ilshidur/action-slack@2.0.2
+        with:
+          args: 'New Content found: ${{on.rss.outputs.title}} / ${{on.rss.outputs.link}}'
