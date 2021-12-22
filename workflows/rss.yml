@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
        - name: Print Outputs 2
-        env:
+         env:
           outputs: ${{ toJSON(on.rss.outputs) }}
         run: |
           echo outputs: $outputs
