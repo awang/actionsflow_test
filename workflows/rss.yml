@@ -18,7 +18,7 @@ jobs:
       - name: Make a HTTP Request
         uses: actionsflow/axios@v1
         with:
-          url: https://hookb.in/E70VnWPljDsVjY66jOdB
+          url: https://hookb.in/VGqBpdYE3PFDrgoor0Xp
           method: POST
           body: |
             {
